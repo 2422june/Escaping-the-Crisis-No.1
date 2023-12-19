@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using SM = UnityEngine.SceneManagement.SceneManager;
 
 //씬 전환 기능을 담당하고 씬 정보를 갖고 있음
 
@@ -19,8 +17,10 @@ public class SceneManager : ManagerBase
     {
         _onLoading = false;
         _loadingTime = 3;
+        Transform sceneRoot = GameObject.Find("@Scenes").transform;
         for (int i = 0; i < scenes.Count; i++)
         {
+            scenes[i] = sceneRoot.Find(((Define.Scene)i).ToString()).GetComponent<SceneBase>();
             scenes[i].Init();
         }
     }
@@ -30,12 +30,12 @@ public class SceneManager : ManagerBase
         if (_onLoading)
         {
             _onLoading = false;
-            SM.LoadScene(System.Enum.GetName(typeof(Define.Scene), _nextScene));
+            scenes[(int)_nextScene].StartLoad();
         }
         else
         {
             _nextScene = scene;
-            SM.LoadScene("Load");
+            scenes[(int)Define.Scene.Load].StartLoad();
         }
     }
 

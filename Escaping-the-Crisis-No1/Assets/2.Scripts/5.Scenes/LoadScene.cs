@@ -12,7 +12,7 @@ public class LoadScene : SceneBase
     private void Start()
     {
         _type = Define.Scene.Load;
-        _name = "Load";
+        _name = _type.ToString();
         _scene = gameObject;
         _speed = 100f / Managers.Scene.GetLoadTime();
         InitUI();

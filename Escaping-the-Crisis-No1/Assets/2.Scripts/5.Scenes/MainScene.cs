@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TitleScene : SceneBase
+public class MainScene : SceneBase
 {
     private void Start()
     {
-        _type = Define.Scene.Title;
-        _name = "Title";
+        _type = Define.Scene.Main;
+        _name = _type.ToString();
         _scene = gameObject;
 
         InitUI();

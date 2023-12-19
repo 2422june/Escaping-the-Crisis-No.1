@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LobbyScene : SceneBase
+public class SelectScene : SceneBase
 {
     private void Start()
     {
-        _type = Define.Scene.Lobby;
-        _name = "Lobby";
+        _type = Define.Scene.Select;
+        _name = _type.ToString();
         _scene = gameObject;
 
         InitUI();
