@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/10.Scenes/RiceSnack_WorkShop.unity
+    guid: 000ae40c81c120740b144a779e0ea9fb
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 66d9d0743b0fa054187b22b70ce2ad33, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b84d4056ca2201d4c8d0f76cab85038a, type: 2}

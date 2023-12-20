@@ -43,9 +43,6 @@ public class MainScene : SceneBase
 
     private void LeaveButton()
     {
-#if UNITY_EDITOR
         Application.Quit();
-#endif
-        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
