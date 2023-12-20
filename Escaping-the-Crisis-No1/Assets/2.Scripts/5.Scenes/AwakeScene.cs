@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelectScene : SceneBase
+public class AwakeScene : SceneBase
 {
     public override void Init(SceneManager sceneMng)
     {
-        _type = Define.Scene.Select;
+        _type = Define.Scene.Awake;
         _name = _type.ToString();
         _scene = gameObject;
 
         InitUI();
         InitEvent();
-
-        gameObject.SetActive(false);
     }
 
     protected override void InitUI()
@@ -22,6 +20,12 @@ public class SelectScene : SceneBase
 
     private void InitEvent()
     {
+        
+    }
+
+    public override void StartLoad()
+    {
+        OnLoad();
     }
 
     protected override void OnLoad()
@@ -32,10 +36,5 @@ public class SelectScene : SceneBase
     public override void LeftScene()
     {
         gameObject.SetActive(false);
-    }
-
-    public override void StartLoad()
-    {
-        OnLoad();
     }
 }

@@ -19,28 +19,31 @@ public static class Util
 
     public static GameObject Find(string target)
     {
-        Transform go = null;
+        GameObject go = null;
+        Transform tr = null;
 
-        go = GameObject.Find(target).transform;
-
-        if (go == null)
-            go = _root.Find(target);
+        go = GameObject.Find(target);
 
         if (go == null)
+            tr = _root.Find(target);
+        else
+            return go;
+
+        if (tr == null)
         {
             for (int i = 0; i < _root.childCount; i++)
             {
-                go = _root.GetChild(i).Find(target);
+                tr = _root.GetChild(i).Find(target);
             }
         }
 
-        if (go == null)
+        if (tr == null)
         {
             Debug.LogError("No Object");
             return null;
         }
 
-        return go.gameObject;
+        return tr.gameObject;
     }
 
     public static void SetRoot(Transform root) { _root = root; }

@@ -11,7 +11,7 @@ public class SceneBase : MonoBehaviour
 
     protected virtual void OnLoad() { }
 
-    public virtual void Init() { }
+    public virtual void Init(SceneManager sceneMng) { }
 
     protected virtual void InitUI() { }
 
