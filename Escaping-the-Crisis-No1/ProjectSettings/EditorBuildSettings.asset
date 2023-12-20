@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/10.Scenes/RiceSnack_WorkShop.unity
+    path: Assets/RiceSnack_Workspace/RiceSnack_WorkShop.unity
     guid: 000ae40c81c120740b144a779e0ea9fb
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 66d9d0743b0fa054187b22b70ce2ad33, type: 2}
