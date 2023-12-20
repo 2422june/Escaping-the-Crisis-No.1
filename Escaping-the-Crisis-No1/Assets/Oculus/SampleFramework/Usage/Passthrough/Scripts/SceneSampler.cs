@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using SM = UnityEngine.SceneManagement.SceneManager;
+using UnityEngine.SceneManagement;
 
 public class SceneSampler : MonoBehaviour
 {
