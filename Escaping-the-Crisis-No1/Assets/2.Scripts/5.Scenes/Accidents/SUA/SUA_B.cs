@@ -7,6 +7,8 @@ public class SUA_B : SceneBase
     [SerializeField]
     private GameObject _choiceAccident, _choiceEdu;
     private bool _isChoicedAccident;
+    [SerializeField]
+    private RoadMovement roadMovement;
 
     public override void Init(SceneManager sceneMng)
     {
@@ -36,6 +38,7 @@ public class SUA_B : SceneBase
         _choiceAccident.SetActive(!_isChoicedAccident);
         _choiceEdu.SetActive(_isChoicedAccident);
         _inScene = true;
+        roadMovement.Return();
     }
 
     public override void LeftScene()
