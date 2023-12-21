@@ -7,11 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/1.Assets/Geopipe/Pack01/NYBlock01/Materials/bus_stop0materialt10gpc62ci6en.mat
-  m_Name: bus_stop0materialt10gpc62ci6en
-========
   m_Name: Dark Gray
->>>>>>>> c3642be7361bd53d9da9a5d8e5710e4f112e8f58:Escaping-the-Crisis-No1/Assets/6.Materials/Dark Gray.mat
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords: []
