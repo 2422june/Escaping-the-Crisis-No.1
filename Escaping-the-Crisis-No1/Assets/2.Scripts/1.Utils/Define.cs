@@ -5,6 +5,7 @@ using UnityEngine;
 //게임 전체에서 활용될 수 있는 enum, struct, const를 저장합니다.
 public class Define
 {
+    [SerializeField]
     public struct UIData
     {
         public string name;
