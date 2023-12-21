@@ -23,6 +23,7 @@ public class MainScene : SceneBase
     private void InitEvent()
     {
         Managers.Event.AddExitButton(ExitButton);
+        Managers.Event.AddStartButton(StartButton);
     }
 
     public override void StartLoad()
@@ -48,6 +49,6 @@ public class MainScene : SceneBase
 
     private void StartButton()
     {
-
+        Managers.Scene.LoadScene(Define.Scene.Select);
     }
 }

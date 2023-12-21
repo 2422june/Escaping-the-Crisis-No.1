@@ -8,6 +8,6 @@ public class StartButton : ButtonBase
 {
     public override void OnClick()
     {
-        Managers.Event.ExcuteExitButton();
+        Managers.Event.ExcuteStartButton();
     }
 }

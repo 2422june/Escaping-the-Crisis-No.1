@@ -25,4 +25,17 @@ public class EventManager : ManagerBase
     { StartButton += func; }
     public void ExcuteStartButton()
     { StartButton(); }
+
+
+    private Function BackButton_AccidentChoice;
+    public void AddBackButton_AccidentChoice(Function func)
+    { BackButton_AccidentChoice += func; }
+    public void ExcuteBackButton_AccidentChoice()
+    { BackButton_AccidentChoice(); }
+
+    private Function SUAButton;
+    public void AddSUA(Function func)
+    { SUAButton += func; }
+    public void ExcuteSUA()
+    { SUAButton(); }
 }

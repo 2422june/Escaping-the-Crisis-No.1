@@ -28,6 +28,8 @@ public class SelectScene : SceneBase
 
     private void InitEvent()
     {
+        Managers.Event.AddBackButton_AccidentChoice(BackButoon);
+        Managers.Event.AddSUA(SUAButoon);
     }
 
     protected override void OnLoad()
@@ -89,5 +91,18 @@ public class SelectScene : SceneBase
         _isChoicedAccident = true;
         _choiceAccident.SetActive(!_isChoicedAccident);
         _choiceEdu.SetActive(_isChoicedAccident);
+    }
+
+    public void BackButoon()
+    {
+        Managers.Scene.LoadScene(Define.Scene.Main);
+    }
+
+    public void SUAButoon()
+    {
+        GameObject resource = Util.Load<GameObject>("Accident/SUA/Accident");
+        GameObject accident = Instantiate(resource, transform.parent);
+        Managers.Scene.SetEduScene(accident);
+        OnChoiceAccident();
     }
 }

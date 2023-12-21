@@ -42,14 +42,14 @@ public class PlayerUIInteractor : MonoBehaviour
 
         if (Physics.Raycast(_handLRay.origin, _handLRay.direction, out _handLHit, _rayDis))
         {
-            _targetL = _handLHit.collider.gameObject;
-            _lineEndL = _targetL.transform.position;
+            _targetL = _handLHit.transform.gameObject;
+            _lineEndL = _handLHit.point;
         }
 
         if (Physics.Raycast(_handRRay.origin, _handRRay.direction, out _handRHit, _rayDis))
         {
-            _targetR = _handRHit.collider.gameObject;
-            _lineEndR = _targetR.transform.position;
+            _targetR = _handRHit.transform.gameObject;
+            _lineEndR = _handRHit.point;
         }
 
         if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
