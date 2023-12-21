@@ -44,7 +44,7 @@ public class RoadMovement : MonoBehaviour
         moveAmount = 0.0f;
         amount = 0.001f;
         moveTime = 0.2f;
-
+        handleRotZ = 0.0f;
         for(int i = 0; i < roadPrefabs.Length; i++)
         {
             originRoadsPos.Add(roadPrefabs[i].transform.position);
@@ -105,7 +105,7 @@ public class RoadMovement : MonoBehaviour
 
         //값 조절해주기
         moveAmount *= amount;
-        StartCoroutine(MoveCoroutine(Vector3.right * moveAmount));
+        StartCoroutine(MoveCoroutine(Vector3.left * moveAmount));
     }
 
     IEnumerator MoveCoroutine(Vector3 dir)
