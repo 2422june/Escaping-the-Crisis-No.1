@@ -41,13 +41,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/6.Materials/Dark Gray.mat
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-=======
         m_Texture: {fileID: 2800000, guid: 1437ac726a8caf741acb2f78a35f27c9, type: 3}
         m_Scale: {x: 1.5, y: 1}
->>>>>>> origin/Arim:Escaping-the-Crisis-No1/Assets/1.Assets/KajamansRoads/Materials/TreesMat.mat
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -68,7 +63,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0

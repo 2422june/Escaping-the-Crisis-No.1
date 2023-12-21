@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/2.Scripts/5.Scenes/AwakeScene.cs.meta
 guid: f1df3fd8941f54146851d3b497060953
+========
+guid: 3a1531d37ce154a48b66509e90914960
+>>>>>>>> c3642be7361bd53d9da9a5d8e5710e4f112e8f58:Escaping-the-Crisis-No1/Assets/2.Scripts/7. KNY/Outline.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

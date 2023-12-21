@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/1.Assets/LowpolyStreetPack/Meshes/Materials/Atlas.mat.meta
 guid: 38e0f6c0765a5374f9a428840748d450
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
+========
+guid: c5bcdf856c28c45869a49fc96048fc3f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+>>>>>>>> c3642be7361bd53d9da9a5d8e5710e4f112e8f58:Escaping-the-Crisis-No1/Assets/Resources/ONSPSettings.asset.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

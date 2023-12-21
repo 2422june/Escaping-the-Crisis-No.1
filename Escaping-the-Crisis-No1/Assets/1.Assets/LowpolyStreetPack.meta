@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/1.Assets/LowpolyStreetPack.meta
 guid: c2bc409ac94f3ad4695df1dbe5073dec
+========
+guid: 4b4ca0b18ee90469ebb257830121cbcf
+>>>>>>>> c3642be7361bd53d9da9a5d8e5710e4f112e8f58:Escaping-the-Crisis-No1/Assets/XR/Loaders.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

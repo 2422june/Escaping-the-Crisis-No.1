@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/1.Assets/Geopipe.meta
 guid: 7d3a141524cdf35499e068e51ee1b2d4
+========
+guid: 5b455f9cbfd4f4de6a6918face0b4da3
+>>>>>>>> c3642be7361bd53d9da9a5d8e5710e4f112e8f58:Escaping-the-Crisis-No1/Assets/2.Scripts/7. KNY.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
