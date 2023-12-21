@@ -15,9 +15,9 @@ public class EventManager : ManagerBase
     }
 
     private Function LeaveButton;
-    public void AddLeaveButton(Function func)
+    public void AddExitButton(Function func)
     { LeaveButton += func; }
-    public void ExcuteLeaveButton()
+    public void ExcuteExitButton()
     { LeaveButton(); }
 
     private Function StartButton;

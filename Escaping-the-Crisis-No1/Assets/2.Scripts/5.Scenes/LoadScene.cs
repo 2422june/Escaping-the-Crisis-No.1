@@ -6,38 +6,39 @@ using UnityEngine.UI;
 public class LoadScene : SceneBase
 {
     private float _speed;
-    //[SerializeField]
-    private Slider loadBar;
+    [SerializeField]
+    private Slider _loadBar;
 
-    private void Start()
+    public override void Init(SceneManager sceneMng)
     {
         _type = Define.Scene.Load;
         _name = _type.ToString();
         _scene = gameObject;
-        _speed = 100f / Managers.Scene.GetLoadTime();
         InitUI();
+        _speed = _loadBar.maxValue / sceneMng.GetLoadTime();
+
+        gameObject.SetActive(false);
     }
 
     protected override void InitUI()
     {
         Managers.UI.Clear();
 
+        Util.SetRoot(transform);
         Util.SetRoot("Canvas");
         Managers.UI.AddUI<Slider>("LoadBar", "LoadBar");
-        loadBar = Managers.UI.GetUI<Slider>("LoadBar");
-
-        StartCoroutine(Loading());
+        _loadBar = Managers.UI.GetUI<Slider>("LoadBar");
     }
 
     private IEnumerator Loading()
     {
-        while(loadBar.value < 100)
+        while(_loadBar.value < _loadBar.maxValue)
         {
-            loadBar.value += _speed * Time.deltaTime;
+            _loadBar.value += _speed * Time.deltaTime;
             yield return null;
         }
         
-        loadBar.value = 100;
+        _loadBar.value = 100;
         OnLoad();
 
         yield return null;
@@ -50,8 +51,15 @@ public class LoadScene : SceneBase
         Managers.Scene.LoadScene();
     }
 
+    public override void LeftScene()
+    {
+        gameObject.SetActive(false);
+    }
+
     public override void StartLoad()
     {
-        OnLoad();
+        _loadBar.value = _loadBar.minValue;
+        gameObject.SetActive(true);
+        StartCoroutine(Loading());
     }
 }

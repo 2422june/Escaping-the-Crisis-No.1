@@ -11,6 +11,6 @@ public class LeaveButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Managers.Event.ExcuteLeaveButton();
+        Managers.Event.ExcuteExitButton();
     }
 }
