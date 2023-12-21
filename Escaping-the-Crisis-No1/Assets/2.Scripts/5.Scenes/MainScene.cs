@@ -38,6 +38,6 @@ public class MainScene : SceneBase
 #if UNITY_EDITOR
         Application.Quit();
 #endif
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
 }
