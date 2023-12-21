@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+//게임 전체에서 활용될 수 있는 enum, struct, const를 저장합니다.
+public class Define
+{
+    [SerializeField]
+    public struct UIData
+    {
+        public string name;
+        public GameObject gameObject;
+        public UnityEngine.Object component;
+    }
+
+    public enum Scene
+    {
+        Awake, Main, Load, Select,
+        Edu_A, Edu_B, Edu_C
+    }
+
+    public enum BGM
+    {
+
+    }
+
+    public enum SFX
+    {
+
+    }
+}
