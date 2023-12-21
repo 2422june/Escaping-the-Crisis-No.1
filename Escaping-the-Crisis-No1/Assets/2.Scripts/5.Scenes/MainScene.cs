@@ -22,7 +22,7 @@ public class MainScene : SceneBase
 
     private void InitEvent()
     {
-        Managers.Event.AddLeaveButton(LeaveButton);
+        Managers.Event.AddExitButton(ExitButton);
     }
 
     public override void StartLoad()
@@ -41,8 +41,13 @@ public class MainScene : SceneBase
         gameObject.SetActive(false);
     }
 
-    private void LeaveButton()
+    private void ExitButton()
     {
         Application.Quit();
+    }
+
+    private void StartButton()
+    {
+
     }
 }

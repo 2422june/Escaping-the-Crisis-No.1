@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-//�� ��ȯ ����� ����ϰ� �� ������ ���� ����
 
 public class SceneManager : ManagerBase
 {
@@ -13,6 +12,7 @@ public class SceneManager : ManagerBase
     private GameObject _rootEduScene;
     private float _loadingTime;
     private bool _onLoading;
+    private int _sceneCount;
 
     public override void Init()
     {
@@ -22,9 +22,9 @@ public class SceneManager : ManagerBase
         Transform scene;
 
         //not contain edu scenes
-        int sceneCount = System.Enum.GetValues(typeof(Define.Scene)).Length - 3;
+        _sceneCount = System.Enum.GetValues(typeof(Define.Scene)).Length - 3;
 
-        for (int i = 0; i < sceneCount; i++)
+        for (int i = 0; i < _sceneCount; i++)
         {
             _scenes.Add(null);
             scene = sceneRoot.Find(((Define.Scene)i).ToString());
@@ -76,11 +76,18 @@ public class SceneManager : ManagerBase
 
     public void SetEduScene(GameObject Edu)
     {
-        _rootEduScene.SetActive(false);
+        if(_rootEduScene != null)
+            _rootEduScene.SetActive(false);
         
         _rootEduScene = Edu;
         _rootEduScene.SetActive(true);
-
+        
+        if(_scenes.Count == _sceneCount)
+        {
+            _scenes.Add(null);
+            _scenes.Add(null);
+            _scenes.Add(null);
+        }
         _scenes[(int)Define.Scene.Edu_A] = _rootEduScene.transform.Find("A").GetComponent<SceneBase>();
         _scenes[(int)Define.Scene.Edu_B] = _rootEduScene.transform.Find("B").GetComponent<SceneBase>();
         _scenes[(int)Define.Scene.Edu_C] = _rootEduScene.transform.Find("C").GetComponent<SceneBase>();

@@ -6,6 +6,7 @@ public class SceneBase : MonoBehaviour
 {
     protected Define.Scene _type;
     protected string _name;
+    protected bool _inScene;
     [HideInInspector]
     public GameObject _scene;
 
