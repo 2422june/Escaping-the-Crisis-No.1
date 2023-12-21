@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerUIInteractor : MonoBehaviour
 {
     [SerializeField]
-    private Transform _hand;
+    private Transform _handL, _handR;
 
 
 }
