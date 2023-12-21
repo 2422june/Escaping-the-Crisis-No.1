@@ -1,17 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/1.Assets/Hologram Interface Wenrexa.meta
-guid: 7efbde1b1e6ab794083e4cc008f61456
-========
-guid: 634bd3145a124467d84c39d4794c5668
->>>>>>>> c3642be7361bd53d9da9a5d8e5710e4f112e8f58:Escaping-the-Crisis-No1/Assets/XR.meta
-=======
 <<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/XR/Loaders.meta
-guid: f195dc27a45404cceb8aca7d6e939ca3
+guid: 4b4ca0b18ee90469ebb257830121cbcf
 ========
 guid: 7efbde1b1e6ab794083e4cc008f61456
 >>>>>>>> 253c5d428b62396f403b59144634217f8b643d8a:Escaping-the-Crisis-No1/Assets/1.Assets/Hologram Interface Wenrexa.meta
->>>>>>> origin/kny
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/1.Assets/AllSkyFree.meta
 guid: e71be7469c01e4342bea0272a5941044
 ========
 guid: 180a4c1e1237d4328888b250432f83a7
 >>>>>>>> c3642be7361bd53d9da9a5d8e5710e4f112e8f58:Escaping-the-Crisis-No1/Assets/11. Shaders.meta
+=======
+<<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/11. Shaders.meta
+guid: de3d4103b8b7046d1aef4f5b259c25ae
+========
+guid: e71be7469c01e4342bea0272a5941044
+>>>>>>>> 253c5d428b62396f403b59144634217f8b643d8a:Escaping-the-Crisis-No1/Assets/1.Assets/AllSkyFree.meta
+>>>>>>> origin/kny
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

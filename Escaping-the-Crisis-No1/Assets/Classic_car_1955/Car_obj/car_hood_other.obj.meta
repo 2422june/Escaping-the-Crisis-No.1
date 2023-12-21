@@ -1,63 +1,99 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/Classic_car_1955/Car_obj/car_hood_other.obj.meta
 guid: 81be502e7d2f0e541be3a24c6d15923d
 timeCreated: 1461925183
 licenseType: Store
+=======
+guid: 3ca2c2ce56b9e44f598f5de419ce4e8a
+>>>>>>> origin/kny:Escaping-the-Crisis-No1/Assets/1.Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment.fbx.meta
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/Classic_car_1955/Car_obj/car_hood_other.obj.meta
     100002: L_hood_other_hood_other_Car_body_Car
     400000: //RootNode
     400002: L_hood_other_hood_other_Car_body_Car
     2300000: L_hood_other_hood_other_Car_body_Car
     3300000: L_hood_other_hood_other_Car_body_Car
     4300000: L_hood_other_hood_other_Car_body_Car
+=======
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: AllSky_DemoEnvironment
+  externalObjects: {}
+>>>>>>> origin/kny:Escaping-the-Crisis-No1/Assets/1.Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment.fbx.meta
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 1
     addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
+<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/Classic_car_1955/Car_obj/car_hood_other.obj.meta
     normalImportMode: 1
     tangentImportMode: 3
+=======
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+>>>>>>> origin/kny:Escaping-the-Crisis-No1/Assets/1.Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment.fbx.meta
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -69,6 +105,8 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1
