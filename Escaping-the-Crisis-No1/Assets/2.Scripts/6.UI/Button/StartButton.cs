@@ -4,14 +4,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class StartButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class StartButton : ButtonBase
 {
-    public void OnPointerEnter(PointerEventData eventData) { }
-
-    public void OnPointerExit(PointerEventData eventData) { }
-
-    public void OnPointerClick(PointerEventData eventData)
+    public override void OnClick()
     {
-        Managers.Event.ExcuteStartButton();
+        Managers.Event.ExcuteExitButton();
     }
 }

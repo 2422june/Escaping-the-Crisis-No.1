@@ -17,10 +17,8 @@ public class PlayerUIInteractor : MonoBehaviour
     private float _rayDis = 10f;
     private Button _buttonL, _buttonR;
 
-    private PointerEventData data;
     private void Start()
     {
-        data.button = PointerEventData.InputButton.Left;
         _lineR = _handR.GetComponent<LineRenderer>();
         _lineL = _handL.GetComponent<LineRenderer>();
 
@@ -61,7 +59,7 @@ public class PlayerUIInteractor : MonoBehaviour
                 _buttonL = Util.GetOrAddComponent<Button>(_targetL);
                 if(_buttonL != null )
                 {
-                    _buttonL.OnPointerClick(data);
+                    Inter(_targetL);
                     _buttonL = null;
                 }
             }
@@ -74,7 +72,7 @@ public class PlayerUIInteractor : MonoBehaviour
                 _buttonR = Util.GetOrAddComponent<Button>(_targetR);
                 if (_buttonR != null)
                 {
-                    _buttonR.OnPointerClick(data);
+                    Inter(_targetR);
                     _buttonR = null;
                 }
             }
@@ -82,5 +80,10 @@ public class PlayerUIInteractor : MonoBehaviour
 
         _lineL.SetPosition(1, _lineEndL);
         _lineR.SetPosition(1, _lineEndR);
+    }
+
+    private void Inter(GameObject btn)
+    {
+        btn.GetComponent<ButtonBase>().OnClick();
     }
 }
