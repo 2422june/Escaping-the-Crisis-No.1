@@ -32,6 +32,8 @@ public class RoadMovement : MonoBehaviour
     private Vector3 originPos;
     //도로를 좌우로 움직일 때 이동시킬 위치
     private Vector3 targetPos;
+    private Vector3 originRoadPos;
+    private List<Vector3> originRoadsPos = new List<Vector3>();
 
     void Start()
     {
@@ -42,6 +44,13 @@ public class RoadMovement : MonoBehaviour
         moveAmount = 0.0f;
         amount = 0.001f;
         moveTime = 0.2f;
+
+        for(int i = 0; i < roadPrefabs.Length; i++)
+        {
+            originRoadsPos.Add(roadPrefabs[i].transform.position);
+        }
+
+        originRoadPos = road.transform.position;
     }
 
     void Update()
@@ -53,6 +62,20 @@ public class RoadMovement : MonoBehaviour
         }
 
         RoadMoveHorizontal();
+    }
+
+    //다시 실행을 할 경우 초기 상태로 전환
+    public void Return()
+    {
+        Debug.Log("Return");
+        //핸들 회전 초기화
+        handleTransform.rotation = Quaternion.identity;
+        //도로 위치 초기화
+        road.transform.position = originRoadPos;
+        for(int i = 0; i < roadPrefabs.Length; i++)
+        {
+            roadPrefabs[i].transform.position = originRoadsPos[i];
+        }
     }
 
     private void RoadScroll(int num)

@@ -33,6 +33,7 @@ public class MainScene : SceneBase
     protected override void OnLoad()
     {
         gameObject.SetActive(true);
+
         //Managers.Audio.PlayBGM();
     }
 
