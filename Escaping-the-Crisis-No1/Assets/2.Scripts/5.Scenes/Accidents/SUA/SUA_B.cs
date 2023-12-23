@@ -5,10 +5,14 @@ using UnityEngine;
 public class SUA_B : SceneBase
 {
     [SerializeField]
-    private GameObject _choiceAccident, _choiceEdu;
-    private bool _isChoicedAccident;
-    [SerializeField]
     private RoadMovement roadMovement;
+    [SerializeField]
+    private List<GameObject> dial = new List<GameObject>();
+    [SerializeField]
+    private List<GameObject> obj = new List<GameObject>();
+
+    [SerializeField]
+    private GameObject _break, _gear, _side, _power;
 
     public override void Init(SceneManager sceneMng)
     {
@@ -34,11 +38,15 @@ public class SUA_B : SceneBase
     protected override void OnLoad()
     {
         gameObject.SetActive(true);
-        _isChoicedAccident = false;
-        _choiceAccident.SetActive(!_isChoicedAccident);
-        _choiceEdu.SetActive(_isChoicedAccident);
         _inScene = true;
         roadMovement.Return();
+
+        _break.GetComponent<Break>().Init(this);
+        _gear.GetComponent<Gear>().Init(this);
+        _side.GetComponent<SideBar>().Init(this);
+        _power.GetComponent<Power>().Init(this);
+
+        Next();
     }
 
     public override void LeftScene()
@@ -53,43 +61,27 @@ public class SUA_B : SceneBase
         OnLoad();
     }
 
+    private int index = -1;
+
     private void Update()
     {
         if (!_inScene)
             return;
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            OnChoiceAccident();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha1) && _isChoicedAccident)
-        {
-            GameObject resource = Util.Load<GameObject>("Accident/SUA/Accident");
-            GameObject accident = Instantiate(resource, transform.parent);
-            Managers.Scene.SetEduScene(accident);
-        }
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Managers.Scene.LoadScene(Define.Scene.Edu_A);
-        }
-
-        if (Input.GetKeyUp(KeyCode.B))
-        {
-            Managers.Scene.LoadScene(Define.Scene.Edu_B);
-        }
-
-        if (Input.GetKeyUp(KeyCode.C))
-        {
-            Managers.Scene.LoadScene(Define.Scene.Edu_C);
-        }
     }
 
-    public void OnChoiceAccident()
+    public void Next()
     {
-        _isChoicedAccident = true;
-        _choiceAccident.SetActive(!_isChoicedAccident);
-        _choiceEdu.SetActive(_isChoicedAccident);
+        if(index >= dial.Count)
+        {
+            Managers.Scene.LoadScene(Define.Scene.Select);
+            return;
+        }
+        index++;
+        dial[index].SetActive(true);
+        if(index > 0)
+        {
+            dial[index-1].SetActive(false);
+        }
+        obj[index].GetComponent<Outline>().DrawOutline();
     }
 }

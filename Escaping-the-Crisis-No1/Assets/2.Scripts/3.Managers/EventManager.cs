@@ -38,4 +38,16 @@ public class EventManager : ManagerBase
     { SUAButton += func; }
     public void ExcuteSUA()
     { SUAButton(); }
+
+    private Function SUA_A;
+    public void AddSUA_A(Function func)
+    { SUA_A += func; }
+    public void ExcuteSUA_A()
+    { SUA_A(); }
+
+    private Function SUA_B;
+    public void AddSUA_B(Function func)
+    { SUA_B += func; }
+    public void ExcuteSUA_B()
+    { SUA_B(); }
 }

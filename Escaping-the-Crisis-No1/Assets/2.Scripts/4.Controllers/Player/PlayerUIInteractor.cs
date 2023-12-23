@@ -1,3 +1,4 @@
+using OculusSampleFramework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -57,7 +58,7 @@ public class PlayerUIInteractor : MonoBehaviour
             if (_targetL != null)
             {
                 _buttonL = Util.GetOrAddComponent<Button>(_targetL);
-                if(_buttonL != null )
+                if (_buttonL != null)
                 {
                     Inter(_targetL);
                     _buttonL = null;
@@ -74,6 +75,33 @@ public class PlayerUIInteractor : MonoBehaviour
                 {
                     Inter(_targetR);
                     _buttonR = null;
+                }
+            }
+        }
+
+        Interactable targetL, targetR;
+        if (OVRInput.GetDown(OVRInput.RawButton.X))
+        {
+            if (_targetL != null)
+            {
+                targetL = Util.GetOrAddComponent<Interactable>(_targetL);
+                if (_buttonL != null)
+                {
+                    targetL.OnClick();
+                    targetL = null;
+                }
+            }
+        }
+
+        if (OVRInput.GetDown(OVRInput.RawButton.A))
+        {
+            if (_targetR != null)
+            {
+                targetR = Util.GetOrAddComponent<Interactable>(_targetR);
+                if (_targetR != null)
+                {
+                    targetR.OnClick();
+                    targetR = null;
                 }
             }
         }

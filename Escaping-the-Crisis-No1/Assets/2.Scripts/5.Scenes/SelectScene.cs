@@ -30,6 +30,8 @@ public class SelectScene : SceneBase
     {
         Managers.Event.AddBackButton_AccidentChoice(BackButoon);
         Managers.Event.AddSUA(SUAButoon);
+        Managers.Event.AddSUA_A(EduA_Butoon);
+        Managers.Event.AddSUA_B(EduB_Butoon);
     }
 
     protected override void OnLoad()
@@ -104,5 +106,15 @@ public class SelectScene : SceneBase
         GameObject accident = Instantiate(resource, transform.parent);
         Managers.Scene.SetEduScene(accident);
         OnChoiceAccident();
+    }
+
+    public void EduB_Butoon()
+    {
+        Managers.Scene.LoadScene(Define.Scene.Edu_B);
+    }
+
+    public void EduA_Butoon()
+    {
+        Managers.Scene.LoadScene(Define.Scene.Edu_A);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SUA_A : SceneBase
+public class SUA_AButton : SceneBase
 {
     [SerializeField]
     private GameObject _choiceAccident, _choiceEdu;
