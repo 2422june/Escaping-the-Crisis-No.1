@@ -9,7 +9,7 @@ public class DataManager : ManagerBase
 
     public override void Init()
     {
-        gameData = Load<DataExamlple, DataForm>("DataExample");
+        //gameData = Load<DataExamlple, DataForm>("DataExample");
     }
 
     private List<T> Load<Loader, T>(string path) where Loader : IDataForm<T>

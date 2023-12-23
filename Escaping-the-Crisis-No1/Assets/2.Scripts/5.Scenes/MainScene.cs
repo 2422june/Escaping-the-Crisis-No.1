@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainScene : SceneBase
 {
-    private void Start()
+    public override void Init(SceneManager sceneMng)
     {
         _type = Define.Scene.Main;
         _name = _type.ToString();
@@ -12,6 +12,8 @@ public class MainScene : SceneBase
 
         InitUI();
         InitEvent();
+
+        gameObject.SetActive(false);
     }
 
     protected override void InitUI()
@@ -20,7 +22,7 @@ public class MainScene : SceneBase
 
     private void InitEvent()
     {
-        Managers.Event.AddLeaveButton(LeaveButton);
+        Managers.Event.AddExitButton(ExitButton);
     }
 
     public override void StartLoad()
@@ -30,14 +32,22 @@ public class MainScene : SceneBase
 
     protected override void OnLoad()
     {
+        gameObject.SetActive(true);
         //Managers.Audio.PlayBGM();
     }
 
-    private void LeaveButton()
+    public override void LeftScene()
     {
-#if UNITY_EDITOR
+        gameObject.SetActive(false);
+    }
+
+    private void ExitButton()
+    {
         Application.Quit();
-#endif
-        UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+    private void StartButton()
+    {
+
     }
 }

@@ -28,7 +28,13 @@ public class UIManager : ManagerBase
             Debug.LogError("Can't Add UI");
             return;
         }
-        _uis[typeof(T)].Add(FindUIData<T>(uiName, obj));
+
+        Define.UIData uiData = FindUIData<T>(uiName, obj);
+        if(uiData.component == null)
+        {
+            Debug.LogError("null");
+        }
+        _uis[typeof(T)].Add(uiData);
     }
 
     public void AddUI<T>(string uiName) where T : UnityEngine.Object
@@ -96,6 +102,7 @@ public class UIManager : ManagerBase
         else
         { uiData.gameObject = Util.GetRoot(); }
 
+
         if(uiData.gameObject == null)
         {
             Debug.LogError("Can't Find Object");
@@ -121,7 +128,11 @@ public class UIManager : ManagerBase
 
     public T GetUI<T>(string uiName) where T : UnityEngine.Object
     {
-        return GetUIData<T>(uiName).component as T;
+        T uiData = GetUIData<T>(uiName).component as T;
+        if (uiData == null)
+            Debug.LogError("Null");
+
+        return uiData;
     }
 
     public GameObject GetUIObject<T>(string uiName) where T : UnityEngine.Object

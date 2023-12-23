@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: 707317715a0f4d54597fd5f382ddf0d2
+NativeFormatImporter:
+=======
+<<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/Resources/ONSPSettings.asset.meta
+guid: c5bcdf856c28c45869a49fc96048fc3f
+NativeFormatImporter:
+========
+guid: e2402d4ef4fe747ae9ad59bdccad4556
+PrefabImporter:
+>>>>>>>> 253c5d428b62396f403b59144634217f8b643d8a:Escaping-the-Crisis-No1/Assets/1.Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSkyFreeDemoEnvironment.prefab.meta
+>>>>>>> origin/kny
+  externalObjects: {}
+  mainObjectFileID: 11400000
+=======
+<<<<<<<< HEAD:Escaping-the-Crisis-No1/Assets/1.Assets/LowpolyStreetPack/Meshes/Materials/Atlas.mat.meta
+guid: 38e0f6c0765a5374f9a428840748d450
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+========
+guid: c5bcdf856c28c45869a49fc96048fc3f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+>>>>>>>> c3642be7361bd53d9da9a5d8e5710e4f112e8f58:Escaping-the-Crisis-No1/Assets/Resources/ONSPSettings.asset.meta
+>>>>>>> c3642be7361bd53d9da9a5d8e5710e4f112e8f58
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
